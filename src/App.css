@@ -1,38 +1,189 @@
+/* App.css */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  background: #2c2f33;
+  color: #ffffff;
+}
+
 .App {
   text-align: center;
+  position: relative; /* Make App container relative */
 }
 
-.App-logo {
-  height: 40vmin;
+section {
+  padding: 40px;
+  z-index: 1; /* Ensure content is above the canvas */
+}
+
+.discord-button {
+  /* Style your Discord button here */
+  background-color: #7289da;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.discord-button:hover {
+  background-color: #5865f2;
+  margin-right: 10px;
+}
+
+.discord-button svg {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.discord-button span {
+  margin: 25px;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(45deg, #7289da, #404eed);
+  padding: 100px 0;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 3em;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Canvas Styles */
+#lineCanvas {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
   pointer-events: none;
+  mix-blend-mode: exclusion;
+  z-index: -1;
+}
+.App {
+  position: relative; /* Make the main content container relative */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* General Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  background: #2c2f33; /* Discord-like dark background */
+  color: #ffffff;
+  overflow-x: hidden; /* Prevent horizontal scrolling if needed */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App {
+  text-align: center;
+  position: relative; /* Make App container relative */
+}
+
+section {
+  padding: 40px; /* Adjust padding as needed */
+  z-index: 1; /* Ensure sections are above the canvas */
+}
+
+.discord-button {
+  /* Style your Discord button here */
+  background-color: #7289da; /* Discord blurple */
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.discord-button:hover {
+  background-color: #404eed;
+  transform: translateY(-3px);
+}
+
+.discord-button svg {
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(45deg, #7289da, #404eed);
+  padding: 100px 0;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 3em;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+#lineCanvas {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  mix-blend-mode: exclusion;
+  z-index: -1;
+}
+
+/* Preloader Styles */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2c2f33;
   display: flex;
-  flex-direction: column;
+}
+/* Preloader Styles */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2c2f33;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  z-index: 1000;
 }
 
-.App-link {
-  color: #61dafb;
+.preloader.hide {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease-out;
 }
 
-@keyframes App-logo-spin {
-  from {
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #7289da;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }

@@ -1,0 +1,12 @@
+.visual-container {
+  position: relative; /* Ensure the container is positioned relative */
+  overflow: hidden; /* Hide overflow for smoother transition */
+}
+
+.circle,
+.square,
+.triangle {
+  position: absolute;
+  opacity: 0;
+  /* ... other initial styles (size, color, etc.) ... */
+}
