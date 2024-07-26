@@ -14,7 +14,7 @@ function Button({ showContent, setShowContent }) {
     // Trigger visual effects
     triggerVisualEffects(() => {
       // Redirect after visual effects complete
-      window.location.href = 'https://discord.gg/BdW7yMFT';
+      window.location.href = 'https://discord.gg/wTUFfbCce5';
     });
 
     anime({
